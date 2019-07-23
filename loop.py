@@ -1,0 +1,1 @@
+userOption = input("Please Select an option, if you want to print something enter 'p' and if your want to quite teh program enter 'q' :\n")
