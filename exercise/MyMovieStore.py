@@ -50,4 +50,20 @@ def find_movie(expected, finder):
             found.append(movie)
     return  found
 
-menu()
+#menu()
+
+
+class Movie:
+    def __init__(self, new_name, new_director):
+        self.name = new_name
+        self.director = new_director
+
+    # let's try to add a method `print_info()` here:
+
+
+    def print_info(self):
+        print(f"{self.name} by {self.director}")
+
+
+movie = Movie("Ghatak", "Sunny Deol")
+movie.print_info()
