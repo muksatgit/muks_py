@@ -12,8 +12,7 @@ my_file_writing.close()
 
 
 
-my_file = open('data.txt','r')
-file_content = my_file.read()
-my_file.close()
+with open('data.txt','r') as my_file
+    file_content = my_file.read()
 
 print(file_content)
