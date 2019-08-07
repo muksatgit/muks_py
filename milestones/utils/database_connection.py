@@ -8,6 +8,8 @@ Python with Context Managers, another Jeff Knupp post. It gets a bit advanced at
 Introduction to Context Managers in Python, a nice read to review context managers as we've looked at in this section. Worth a look!
 SQLite AUTOINCREMENT : Why You Should Avoid Using It, we didn't talk about AUTOINCREMENT in SQLite, but it is a frequent question amongst my students. Here's why AUTOINCREMENT can be a bad choice in SQLite.
 
+
+Type Hinting : https://docs.python.org/3/library/typing.html
 """
 
 import sqlite3
@@ -19,7 +21,7 @@ class DatabaseConnection:
         self.connection = None
         self.host = host
 
-    def __enter__(self):
+    def __enter__(self) -> sqlite3.Connection:
         self.connection = sqlite3.connect(self.host)
         return self.connection
 
